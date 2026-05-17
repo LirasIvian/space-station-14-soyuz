@@ -10616,17 +10616,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 88.48938,42.436916
       parent: 2
-- proto: ADTClothingHeadHatRedji
-  entities:
-  - uid: 21
-    components:
-    - type: Transform
-      parent: 20
-    - type: Clothing
-      inSlot: head
-      inSlotFlag: HEAD
-    - type: Physics
-      canCollide: False
 - proto: AirAlarm
   entities:
   - uid: 22
@@ -103208,18 +103197,6 @@ entities:
           showEnts: False
           occludes: False
           ent: 16
-  - uid: 20
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 100.5,66.5
-      parent: 2
-    - type: ContainerContainer
-      containers:
-        head: !type:ContainerSlot
-          showEnts: False
-          occludes: False
-          ent: 21
   - uid: 6652
     components:
     - type: Transform
