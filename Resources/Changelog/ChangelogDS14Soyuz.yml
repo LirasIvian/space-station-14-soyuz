@@ -586,3 +586,10 @@ Entries:
     message: Ошибки карты snowball, а теперь там еще есть и коморка пилота
   - type: Fix
     message: Автоматический чейнджлог
+- id: 59
+  author: Genes1us
+  time: '2026-05-20T15:47:44.768249+00:00'
+  pr: 305
+  changes:
+  - type: Tweak
+    message: Ремапп шаттла почты, который был до апстрима.
