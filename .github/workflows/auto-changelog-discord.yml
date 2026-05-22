@@ -20,7 +20,7 @@ jobs:
           echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
           echo "AUTHOR=${{ github.event.pull_request.user.login }}" >> $GITHUB_OUTPUT
           echo "REPO=${{ github.repository }}" >> $GITHUB_OUTPUT
-          echo "MERGED_AT=${{ github.event.pull_request.merged_at }}" >> $GITHUB_OUTPUT
+          echo "PR_HTML_URL=${{ github.event.pull_request.html_url }}" >> $GITHUB_OUTPUT
 
       - name: Parse PR and build JSON
         id: parse
@@ -29,14 +29,13 @@ jobs:
           PR_NUMBER: ${{ steps.extract.outputs.PR_NUMBER }}
           AUTHOR: ${{ steps.extract.outputs.AUTHOR }}
           REPO: ${{ steps.extract.outputs.REPO }}
-          MERGED_AT: ${{ steps.extract.outputs.MERGED_AT }}
+          PR_HTML_URL: ${{ steps.extract.outputs.PR_HTML_URL }}
         run: |
           python <<'EOF'
           import base64
           import json
           import os
           import re
-          from datetime import datetime
 
           def set_output(name, value):
               with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
@@ -52,28 +51,19 @@ jobs:
               exit(0)
 
           sections = {
-              "Добавлено": "🆕 Добавлено",
-              "Удалено": "❌ Удалено",
-              "Изменено": "⚒️ Изменено",
-              "Исправлено": "🐛 Исправлено",
+              "Добавлено": "🆕",
+              "Удалено": "❌",
+              "Изменено": "⚒️",
+              "Исправлено": "🐛",
           }
 
           pr_number = os.environ.get("PR_NUMBER", "")
           author = os.environ.get("AUTHOR", "unknown")
-          merged_at = os.environ.get("MERGED_AT", "")
+          pr_html_url = os.environ.get("PR_HTML_URL", "")
 
-          if merged_at:
-              try:
-                  dt = datetime.fromisoformat(merged_at.replace('Z', '+00:00'))
-                  merged_at_str = dt.strftime("%Y-%m-%d %H:%M:%S UTC")
-              except:
-                  merged_at_str = merged_at
-          else:
-              merged_at_str = "unknown"
+          content_lines = [f"👤 Автор: **{author}**"]
 
-          content_lines = [f"Автор: {author}, {merged_at_str}"]
-
-          for title, emoji_text in sections.items():
+          for title, emoji in sections.items():
               pattern = rf"- {re.escape(title)}:\s*(.*?)(?=\n- [^:]|$)"
               
               for block in re.findall(pattern, desc, flags=re.DOTALL):
@@ -84,7 +74,7 @@ jobs:
                   ]
                   message = re.sub(r"\s+", " ", " ".join(lines)).strip()
                   if message:
-                      content_lines.append(f"{emoji_text} {message} (PR #{pr_number})")
+                      content_lines.append(f"{emoji} - {message} ([PR #{pr_number}]({pr_html_url}))")
 
           if len(content_lines) == 1:
               print("No changelog changes found. Skipping Discord notification.")
@@ -141,9 +131,9 @@ jobs:
 #            echo "CHANGELOG_DISCORD_WEBHOOK_DEADSPACE secret is not set"
 #            exit 1
 #          fi
-
+#
 #          PAYLOAD=$(cat "$PAYLOAD_FILE")
-
+#
 #          curl -X POST \
 #            -H "Content-Type: application/json" \
 #            -d "$PAYLOAD" \
