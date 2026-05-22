@@ -121,24 +121,23 @@ jobs:
             --silent \
             --show-error
 
-#      - name: Send to Discord (Deadspace)
-#        if: steps.parse.outputs.should_send == 'true'
-#        env:
-#          PAYLOAD_FILE: ${{ steps.parse.outputs.payload_file }}
-#          WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK_DEADSPACE }}
-#        run: |
-#          if [ -z "$WEBHOOK_URL" ]; then
-#            echo "CHANGELOG_DISCORD_WEBHOOK_DEADSPACE secret is not set"
-#            exit 1
-#          fi
-#
-#          PAYLOAD=$(cat "$PAYLOAD_FILE")
-#
-#          curl -X POST \
-#            -H "Content-Type: application/json" \
-#            -d "$PAYLOAD" \
-#            "$WEBHOOK_URL" \
-#            --fail \
-#            --silent \
-#            --show-error
-# Выключено до теста
+      - name: Send to Discord (Deadspace)
+        if: steps.parse.outputs.should_send == 'true'
+        env:
+          PAYLOAD_FILE: ${{ steps.parse.outputs.payload_file }}
+          WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK_DEADSPACE }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "CHANGELOG_DISCORD_WEBHOOK_DEADSPACE secret is not set"
+            exit 1
+          fi
+
+          PAYLOAD=$(cat "$PAYLOAD_FILE")
+
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            "$WEBHOOK_URL" \
+            --fail \
+            --silent \
+            --show-error
