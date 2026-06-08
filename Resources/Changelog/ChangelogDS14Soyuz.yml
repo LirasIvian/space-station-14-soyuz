@@ -770,3 +770,12 @@ Entries:
   changes:
   - type: Tweak
     message: Скрипт паблиша, теперь он отправляет смешную гифку
+- id: 76
+  author: PERed5
+  time: '2026-06-08T09:33:41.463342+00:00'
+  pr: 332
+  changes:
+  - type: Add
+    message: Возвращён планетоид
+  - type: Tweak
+    message: Для удобства немного оптимизирована дорожная карта
