@@ -792,3 +792,16 @@ Entries:
     message: Новая цель
   - type: Tweak
     message: Спрайты печатей. Они теперь не НТшные
+- id: 78
+  author: Genes1us
+  time: '2026-06-11T12:57:11.992871+00:00'
+  pr: 336
+  changes:
+  - type: Add
+    message: Апстрим до основной сборки
+  - type: Remove
+    message: Апстрим до основной сборки
+  - type: Tweak
+    message: Апстрим до основной сборки
+  - type: Fix
+    message: Апстрим до основной сборки
