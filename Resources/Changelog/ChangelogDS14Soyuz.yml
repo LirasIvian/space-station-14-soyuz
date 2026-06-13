@@ -838,3 +838,10 @@ Entries:
   changes:
   - type: Add
     message: 9 игрушек плюшевых лис
+- id: 82
+  author: Genes1us
+  time: '2026-06-13T19:20:04.783798+00:00'
+  pr: 341
+  changes:
+  - type: Add
+    message: Апстрим до основной сборки
