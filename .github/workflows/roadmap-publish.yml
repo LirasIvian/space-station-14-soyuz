@@ -16,7 +16,7 @@ on:
       embed_style:
         description: '🎨 Стиль отображения'
         required: false
-        default: 'single'
+        default: 'multiple'
         type: choice
         options:
           - single
