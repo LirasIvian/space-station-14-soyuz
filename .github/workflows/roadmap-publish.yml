@@ -30,6 +30,9 @@ on:
           - default
           - dark
           - light
+          - neon
+          - pastel
+          - metal
 
 jobs:
   send-roadmap-manual:
@@ -63,24 +66,45 @@ jobs:
         
         if color_scheme == 'default':
             colors = {
-                'completed': 0x00ff00,
-                'inprogress': 0xffa500,
-                'planned': 0x0099ff,
+                'completed': 0x2ecc71,
+                'inprogress': 0xe67e22,
+                'planned': 0x2980b9,
                 'default': 0x5865f2
             }
         elif color_scheme == 'dark':
             colors = {
-                'completed': 0x2ecc71,
-                'inprogress': 0xe67e22,
-                'planned': 0x3498db,
-                'default': 0x2c3e50
+                'completed': 0x145214,
+                'inprogress': 0x5c3a00,
+                'planned': 0x002266,
+                'default': 0x1a1a2e
             }
         elif color_scheme == 'light':
             colors = {
-                'completed': 0x27ae60,
-                'inprogress': 0xf39c12,
-                'planned': 0x2980b9,
-                'default': 0x95a5a6
+                'completed': 0x90ee90,
+                'inprogress': 0xffd700,
+                'planned': 0x87ceeb,
+                'default': 0xe0e0e0
+            }
+        elif color_scheme == 'neon':
+            colors = {
+                'completed': 0x39ff14,
+                'inprogress': 0xff0730,
+                'planned': 0x00ffff,
+                'default': 0xbf00ff
+            }
+        elif color_scheme == 'pastel':
+            colors = {
+                'completed': 0xbcf0bc,
+                'inprogress': 0xffcc99,
+                'planned': 0x99ccff,
+                'default': 0xcc99ff
+            }
+        elif color_scheme == 'metal':
+            colors = {
+                'completed': 0xc0c0c0,
+                'inprogress': 0xcd7f32,
+                'planned': 0x4682b4,
+                'default': 0x808080
             }
         
         filtered_entries = []
