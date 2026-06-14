@@ -51,7 +51,7 @@ jobs:
         from datetime import datetime
         
         try:
-            with open('Resources/Prototypes/_DeadSpace/_Soyuz/roadmap.yml', 'r', encoding='utf-8') as f:
+            with open('Resources/Prototypes/roadmap.yml', 'r', encoding='utf-8') as f:
                 entries = yaml.safe_load(f)
         except FileNotFoundError:
             print("❌ Файл roadmap.yml не найден!")
@@ -81,21 +81,16 @@ jobs:
         inprogress.sort(key=lambda x: x.get('order', 999))
         planned.sort(key=lambda x: x.get('order', 999))
         
-        def format_task(entry, include_description=True, max_desc_len=100):
+        def format_task(entry, include_description=True):
             title = entry.get('title', 'Без названия')
             description = entry.get('description', '')
             tags = entry.get('tags', [])
             
             task = f"**{title}**"
             if include_description and description:
-                desc = description[:max_desc_len]
-                if len(description) > max_desc_len:
-                    desc += "..."
-                task += f"\n*{desc}*"
+                task += f"\n{description}"
             if tags:
                 tags_str = ', '.join(tags)
-                if len(tags_str) > 50:
-                    tags_str = tags_str[:47] + "..."
                 task += f"\n`{tags_str}`"
             
             return task
@@ -138,37 +133,37 @@ jobs:
             })
             
             if completed:
-                completed_text = "\n\n".join([format_task(task, max_desc_len=80) for task in completed[:5]])
-                if len(completed) > 5:
-                    completed_text += f"\n\n*...и еще {len(completed)-5} задач*"
+                completed_text = "\n\n".join([format_task(task) for task in completed])
+                if len(completed_text) > 1024:
+                    completed_text = completed_text[:1020] + "..."
                 fields.append({
                     "name": f"✅ Выполнено ({len(completed)})",
-                    "value": completed_text[:1024],
+                    "value": completed_text,
                     "inline": False
                 })
             
             if inprogress:
-                inprogress_text = "\n\n".join([format_task(task, max_desc_len=80) for task in inprogress[:5]])
-                if len(inprogress) > 5:
-                    inprogress_text += f"\n\n*...и еще {len(inprogress)-5} задач*"
+                inprogress_text = "\n\n".join([format_task(task) for task in inprogress])
+                if len(inprogress_text) > 1024:
+                    inprogress_text = inprogress_text[:1020] + "..."
                 fields.append({
                     "name": f"🚧 В процессе ({len(inprogress)})",
-                    "value": inprogress_text[:1024],
+                    "value": inprogress_text,
                     "inline": False
                 })
             
             if planned:
-                planned_text = "\n\n".join([format_task(task, max_desc_len=80) for task in planned[:5]])
-                if len(planned) > 5:
-                    planned_text += f"\n\n*...и еще {len(planned)-5} задач*"
+                planned_text = "\n\n".join([format_task(task) for task in planned])
+                if len(planned_text) > 1024:
+                    planned_text = planned_text[:1020] + "..."
                 fields.append({
                     "name": f"📋 В планах ({len(planned)})",
-                    "value": planned_text[:1024],
+                    "value": planned_text,
                     "inline": False
                 })
             
             embed = {
-                "title": "🗺️ Дорожная карта Союз-1",
+                "title": "Дорожная карта Союз-1 ☭",
                 "description": "Актуальный план развития проекта",
                 "color": colors['default'],
                 "fields": fields,
@@ -234,7 +229,7 @@ jobs:
         
         for i, embed in enumerate(embeds, 1):
             payload = {
-                "username": "🗺️ Дорожная карта Союз-1",
+                "username": "Дорожная карта Союз-1 ☭",
                 "avatar_url": "https://github.com/PERed5/soyuz/blob/main/soyuz.png?raw=true",
                 "embeds": [embed]
             }
