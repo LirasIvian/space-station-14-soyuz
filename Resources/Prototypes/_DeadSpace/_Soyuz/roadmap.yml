@@ -68,3 +68,11 @@
   order: 1
   tags:
     - "Нереализуемо"
+
+- type: roadmapEntry
+  id: Roadmap8
+  title: "Создать удалённое добавление задач в карту"
+  description: "Через бота союза!!"
+  category: Completed
+  tags:
+    - "Дискорд"
