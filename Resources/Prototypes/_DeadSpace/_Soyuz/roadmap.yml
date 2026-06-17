@@ -77,3 +77,12 @@
   tags:
     - "C#"
     - "QoL"
+
+- type: roadmapEntry
+  id: Roadmap9
+  title: "Исправить ошибки дорожной карты"
+  description: "Исправить ошибки отображения дорожной карты в игре, а так же стиль её интерфейса в игре"
+  category: Planned
+  tags:
+    - "QoL"
+    - "интерфейс"
