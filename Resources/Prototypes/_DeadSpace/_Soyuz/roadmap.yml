@@ -87,3 +87,18 @@
     - "QoL"
     - "интерфейс"
 
+- type: roadmapEntry
+  id: Roadmap10
+  title: "Новые виды наркотиков"
+  description: "Добавить новые виды наркотиков. Названия взять из рл, но слегка изменить"
+  category: Planned
+  tags:
+    - "._."
+
+- type: roadmapEntry
+  id: Roadmap11
+  title: "Добавить штурмовую кувалду"
+  description: "Добавить штурмовую кувалду для милиции с большим количеством структурного урона"
+  category: InProgress
+  tags:
+    - "СГМ"
