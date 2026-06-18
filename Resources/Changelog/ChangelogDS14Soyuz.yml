@@ -906,3 +906,10 @@ Entries:
   changes:
   - type: Fix
     message: КПБ теперь не разряжается спустя 5 секунд после зарядки
+- id: 90
+  author: PERed5
+  time: '2026-06-18T12:33:38.691470+00:00'
+  pr: 354
+  changes:
+  - type: Fix
+    message: Возможно спрайты печатей
