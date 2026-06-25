@@ -111,3 +111,11 @@
   tags:
     - "Вайтлист"
     - "QoL"
+
+- type: roadmapEntry
+  id: Roadmap13
+  title: "добавить фентанил"
+  description: "названием все сказано"
+  category: Planned
+  tags:
+    - "Медикаменты"
