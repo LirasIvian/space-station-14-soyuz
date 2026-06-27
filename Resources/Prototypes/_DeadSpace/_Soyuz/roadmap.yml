@@ -120,10 +120,3 @@
   tags:
     - "Медикаменты"
 
-- type: roadmapEntry
-  id: Roadmap14
-  title: "Обновление автороадмапы"
-  description: "Да"
-  category: Completed
-  tags:
-    - "Дискорд"
