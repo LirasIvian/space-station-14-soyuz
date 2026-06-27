@@ -922,3 +922,14 @@ Entries:
     message: Эмоция "Боевой клич" для всех органических рас
   - type: Add
     message: Упакованный продвинутый шахтёрмаг в лодаут мастера-шахтёра https://github.com/user-attachments/assets/5861fc47-ac0e-46ba-aeb5-b96acef78eda
+- id: 92
+  author: Genes1us
+  time: '2026-06-27T10:51:16.344461+00:00'
+  pr: 361
+  changes:
+  - type: Add
+    message: Футболка с гербом СССП. Спрайты от кайнзе
+  - type: Tweak
+    message: Импортировал логику стака гост-ролей.
+  - type: Tweak
+    message: Папка союз вернулась в родную гавань.
