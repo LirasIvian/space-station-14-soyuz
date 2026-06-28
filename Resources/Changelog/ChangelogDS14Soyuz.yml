@@ -946,3 +946,10 @@ Entries:
     message: Неиспользуемая музыка, её было на 300 МБ +
   - type: Tweak
     message: Спрайты печатей. ДАЙ БОГ они работать теперь будут
+- id: 94
+  author: PERed5
+  time: '2026-06-28T16:18:01.907170+00:00'
+  pr: 362
+  changes:
+  - type: Fix
+    message: Печать ГШ
