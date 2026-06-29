@@ -953,3 +953,10 @@ Entries:
   changes:
   - type: Fix
     message: Печать ГШ
+- id: 95
+  author: PERed5
+  time: '2026-06-29T19:40:00.285877+00:00'
+  pr: 363
+  changes:
+  - type: Add
+    message: Новый имплант "Культурность". Матюкаца с этим имплантом низя
