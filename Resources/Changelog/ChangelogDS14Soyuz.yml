@@ -960,3 +960,18 @@ Entries:
   changes:
   - type: Add
     message: Новый имплант "Культурность". Матюкаца с этим имплантом низя
+- id: 96
+  author: PERed5
+  time: '2026-06-30T11:06:35.337907+00:00'
+  pr: 364
+  changes:
+  - type: Add
+    message: Планшет управления отрядами СМу
+  - type: Add
+    message: Импортирован планшет управления отрядами
+  - type: Tweak
+    message: Спрайты отрядов
+  - type: Fix
+    message: Спрайт борга милиции
+  - type: Fix
+    message: Стоимость вольфрама в очках шахтеров
