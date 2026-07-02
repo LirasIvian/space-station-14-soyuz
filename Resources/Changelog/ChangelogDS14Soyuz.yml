@@ -1000,3 +1000,11 @@ Entries:
   changes:
   - type: Add
     message: Кувалда для Советской Гражданской Милиции.
+- id: 100
+  author: HavvaMariajmiPalmer
+  time: '2026-07-02T22:53:57.452225+00:00'
+  pr: 369
+  changes:
+  - type: Tweak
+    message: Скаф и шлема на атмосе (частично) Собран по частям скаф бма и перекрашен
+      в черно КРАСНЫЙ по желанию REPed
