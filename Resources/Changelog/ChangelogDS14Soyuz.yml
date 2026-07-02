@@ -993,3 +993,10 @@ Entries:
     message: Новое название боевого мачете.
   - type: Remove
     message: Старое название боевого мачете.
+- id: 99
+  author: LirasIvian
+  time: '2026-07-02T20:14:35.031363+00:00'
+  pr: 368
+  changes:
+  - type: Add
+    message: Кувалда для Советской Гражданской Милиции.
