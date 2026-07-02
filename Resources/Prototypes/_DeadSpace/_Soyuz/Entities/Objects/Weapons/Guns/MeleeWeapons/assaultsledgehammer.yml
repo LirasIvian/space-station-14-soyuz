@@ -5,6 +5,7 @@
   id: AssaultSledgehammer
   description: Штурмовая кувалда, что способна снести не одну стену на станции. Применяется Наркоматом Всесоюзной Безопасности и Советской Гражданской Милицией.
   components:
+  - type: MeleeRequiresWield
   - type: Clothing
     sprite: _DeadSpace/_Soyuz/Objects/Weapons/Melee/assaultsledgehammer.rsi
     quickEquip: false
@@ -28,15 +29,10 @@
     wideAnimationRotation: 135
     damage:
       types:
-        Blunt: 15
-        Structural: 15
+        Blunt: 50
+        Structural: 50
     soundHit:
       collection: MetalThud
   - type: Wieldable
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Blunt: 25
-        Structural: 35
   - type: Item
     size: Large
