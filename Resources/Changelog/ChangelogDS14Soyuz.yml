@@ -1015,3 +1015,13 @@ Entries:
   changes:
   - type: Tweak
     message: Спрайты пилотского и ИСБ скафов. + шейдеры свечения
+- id: 102
+  author: HavvaMariajmiPalmer
+  time: '2026-07-04T18:28:25.389303+00:00'
+  pr: 371
+  changes:
+  - type: Add
+    message: шейдеры на все скафы сб ( не всем. Щиткод сски ударил по шлему обычного
+      сбшника )
+  - type: Tweak
+    message: все скафы сб
