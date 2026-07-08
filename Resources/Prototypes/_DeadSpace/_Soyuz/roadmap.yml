@@ -120,3 +120,10 @@
   tags:
     - "Медикаменты"
 
+- type: roadmapEntry
+  id: Roadmap14
+  title: "Проверка роадмапы"
+  description: "Да проверю быренько и всё"
+  category: Planned
+  tags:
+    - "Тест"
