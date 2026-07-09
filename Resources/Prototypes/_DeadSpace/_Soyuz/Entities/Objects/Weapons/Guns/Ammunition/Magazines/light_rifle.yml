@@ -44,6 +44,24 @@
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
 
+# Magazine
+- type: entity
+  id: DrumMagazineLightRifleEmpty
+  name: барабанный магазин (7.62х39 мм винтовочный)
+  suffix: empty
+  parent: DrumMagazineLightRifle
+  description: Барабаный магазин на 75 патронов для РПК-16. Можно зарядить любой вид патрона 7.62х39 мм.
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+    capacity: 75
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
 - type: entity
   id: DrumMagazineLightRifleIncendiary
   name: барабанный магазин (7.62х39 мм винтовочный зажигательные)
@@ -68,24 +86,6 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifleUranium
-    capacity: 75
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-
-# Magazine
-- type: entity
-  id: DrumMagazineLightRifleEmpty
-  name: барабанный магазин (7.62х39 мм винтовочный)
-  suffix: empty
-  parent: DrumMagazineLightRifle
-  description: Барабаный магазин на 75 патронов для РПК-16. Можно зарядить любой вид патрона 7.62х39 мм.
-  components:
-  - type: BallisticAmmoProvider
-    proto: null
     capacity: 75
   - type: Sprite
     layers:
@@ -142,6 +142,15 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_DeadSpace/Items/Handing/gun/ballistics/magazine/magazine_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_DeadSpace/Items/Handing/gun/ballistics/magazine/magazine_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DeadSpace/Items/Handing/gun/ballistics/magazine/magazine_drop.ogg
 
 # Magazines
 - type: entity
@@ -208,6 +217,12 @@
   components:
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifleIncendiary
+  - type: Sprite
+    layers:
+    - state: incendiary
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
 
 - type: entity
   id: MagazineLightRifleAsValTungsten
@@ -257,6 +272,15 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_DeadSpace/Items/Handing/gun/ballistics/magazine/magazine_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_DeadSpace/Items/Handing/gun/ballistics/magazine/magazine_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DeadSpace/Items/Handing/gun/ballistics/magazine/magazine_drop.ogg
 
 # Magazines
 - type: entity
