@@ -1045,3 +1045,10 @@ Entries:
   changes:
   - type: Add
     message: 3 набора с основы в лодаут КГБ
+- id: 105
+  author: Genes1us
+  time: '2026-07-09T21:55:05.797460+00:00'
+  pr: 375
+  changes:
+  - type: Fix
+    message: Вторая газовая маска КГБ при заходе в раунд
