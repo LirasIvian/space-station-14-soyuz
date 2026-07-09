@@ -1038,3 +1038,10 @@ Entries:
     message: Апстрим до сборки фобоса
   - type: Fix
     message: Апстрим до сборки фобоса
+- id: 104
+  author: Genes1us
+  time: '2026-07-09T21:27:10.418956+00:00'
+  pr: 374
+  changes:
+  - type: Add
+    message: 3 набора с основы в лодаут КГБ
