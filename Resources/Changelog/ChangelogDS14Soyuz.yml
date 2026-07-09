@@ -1025,3 +1025,16 @@ Entries:
       сбшника )
   - type: Tweak
     message: все скафы сб
+- id: 103
+  author: Genes1us
+  time: '2026-07-09T16:41:12.768297+00:00'
+  pr: 373
+  changes:
+  - type: Add
+    message: Апстрим до сборки фобоса
+  - type: Remove
+    message: Апстрим до сборки фобоса
+  - type: Tweak
+    message: Апстрим до сборки фобоса
+  - type: Fix
+    message: Апстрим до сборки фобоса
