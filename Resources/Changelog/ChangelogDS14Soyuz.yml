@@ -1052,3 +1052,10 @@ Entries:
   changes:
   - type: Fix
     message: Вторая газовая маска КГБ при заходе в раунд
+- id: 106
+  author: PERed5
+  time: '2026-07-10T23:13:44.986959+00:00'
+  pr: 378
+  changes:
+  - type: Fix
+    message: Локализация модулей СБ и шаблона пулл реквестов
