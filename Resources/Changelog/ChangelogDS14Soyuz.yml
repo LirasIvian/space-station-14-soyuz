@@ -1116,3 +1116,10 @@ Entries:
   changes:
   - type: Fix
     message: Кейс неопределённости ОКГБ
+- id: 111
+  author: PERed5
+  time: '2026-07-13T20:58:57.182165+00:00'
+  pr: 385
+  changes:
+  - type: Fix
+    message: админские силовые перчатки
