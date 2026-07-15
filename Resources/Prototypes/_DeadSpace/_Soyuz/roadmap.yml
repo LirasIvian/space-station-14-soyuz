@@ -73,7 +73,7 @@
   id: Roadmap8
   title: "Звания СГМ и НКВБ"
   description: "Добавить звания для милиции и НКВБ за наигранное на них время, перенести механ званий с RMC14"
-  category: Planned
+  category: Completed
   tags:
     - "C#"
     - "QoL"
